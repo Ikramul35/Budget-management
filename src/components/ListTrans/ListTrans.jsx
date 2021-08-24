@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
-import { useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Addbutton from '../Addbutton/Addbutton';
 
 const ListTrans = () => {
@@ -37,7 +36,7 @@ const ListTrans = () => {
         let tm = `${tran.date.split('-').join('')}${tran.time
             .split(':')
             .join('')}`;
-        console.log(Number(tm));
+        // console.log(Number(tm));
         return Number(tm);
     };
 

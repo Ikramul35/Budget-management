@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react';
-import { useState } from 'react';
-
+import React, { Fragment, useState } from 'react';
 import styles from './Addbutton.module.css';
+
 
 let Addbutton = ({ edit, tran }) => {
     const [payer, setPayer] = useState(edit ? tran.payer : 'self');
@@ -68,13 +67,15 @@ let Addbutton = ({ edit, tran }) => {
                 role="dialog"
                 aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true"
-                onClick={() => setBack()}
+                onClick={setBack}
             >
                 <div
                     className="modal-dialog modal-dialog-centered"
                     role="document"
                 >
-                    <div className="modal-content">
+                    <div className="modal-content" 
+                    onClick={(e) => e.stopPropagation()}
+                    >
                         <div className="modal-header">
                             <h5
                                 className="modal-title"
